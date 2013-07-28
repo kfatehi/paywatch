@@ -5,17 +5,20 @@ describe Paywatch::GUI do
   before { get path }
   subject { last_response }
 
-  describe "index" do
-    let(:path) {'/'}
+  shared_examples_for "a page" do
     it { should be_ok }
     it { subject.body.should match /Home/ }
+  end
+
+  describe "index" do
+    let(:path) {'/'}
+    it_behaves_like "a page"
     it { subject.body.should match /Configure/ }
   end
 
   describe "configure" do
     let(:path) {'/configure'}
-    it { should be_ok }
-    it { subject.body.should match /Home/ }
+    it_behaves_like "a page"
     it { subject.body.should match /Projects/ }
   end
 end
