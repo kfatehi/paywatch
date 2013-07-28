@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Paywatch::GUI do
   let(:app) { Paywatch::GUI }
-  before { get path }
   subject { last_response }
 
   shared_examples_for "a page" do
@@ -11,14 +10,25 @@ describe Paywatch::GUI do
   end
 
   describe "index" do
-    let(:path) {'/'}
+    before { get '/' }
     it_behaves_like "a page"
     it { subject.body.should match /Configure/ }
   end
 
   describe "configure" do
-    let(:path) {'/configure'}
-    it_behaves_like "a page"
-    it { subject.body.should match /Projects/ }
+    describe "GET /configure" do
+      before { get '/configure' }
+      it_behaves_like "a page"
+      it { subject.body.should match /Projects/ }
+    end
+
+    describe "create project" do
+      before do
+        post '/configure/projects'
+      end
+      it "creates a project" do
+        Project.all.should have(1).item
+      end
+    end
   end
 end
