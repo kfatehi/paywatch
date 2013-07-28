@@ -7,6 +7,10 @@ module Paywatch
       haml :index
     end
 
+    get '/configure' do
+      haml :configure
+    end
+
     configure do
       if environment != :test
         require 'launchy'

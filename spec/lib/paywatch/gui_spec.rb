@@ -8,11 +8,14 @@ describe Paywatch::GUI do
   describe "index" do
     let(:path) {'/'}
     it { should be_ok }
+    it { subject.body.should match /Home/ }
     it { subject.body.should match /Configure/ }
   end
 
-  describe "configuration UI" do
+  describe "configure" do
     let(:path) {'/configure'}
     it { should be_ok }
+    it { subject.body.should match /Home/ }
+    it { subject.body.should match /Projects/ }
   end
 end
