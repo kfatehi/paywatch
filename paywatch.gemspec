@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "pry"
   spec.add_development_dependency 'rack-test'
+  spec.add_development_dependency 'thin'
 
   spec.add_runtime_dependency "sinatra"
   spec.add_runtime_dependency "overtimer"
