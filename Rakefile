@@ -21,11 +21,9 @@ task :console do
   system("irb -r ./config/boot.rb")
 end
 
-desc "Show help menu"
-task :help do
-  puts "Available rake tasks: "
-  puts "rake console - Run a IRB console with all enviroment loaded"
-  puts "rake spec - Run specs and calculate coverage"
+desc "Run with shotgun"
+task :shotgun do
+  system('bundle exec shotgun config.ru')
 end
 
 task :default => :cov
