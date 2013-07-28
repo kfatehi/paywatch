@@ -2,15 +2,17 @@
 %html
   %head
     %title Paywatch
-    %link(rel="stylesheet" href="css/styles.css")
+    %link{rel:'stylesheet', href:'css/styles.css'}
   %body
     #header
       %h1 Paywatch
       %h2 watch activity to determine hours worked per project
     #nav
       %ul
-        %a(href="/")
+        %a{href:'/'}
           %li Home
+        %a{href:'/configure'}
+          %li Configure
     #content
       = yield
 
