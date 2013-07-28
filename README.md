@@ -14,10 +14,10 @@ watch activity to determine hours worked per project
     +---------------+---+          |    project                |
                     |              |      |                    |
       +-------------+---+          |    +-+-----------+-----+  |
-   +--+Paywatch::Watcher+---watch--+    | Paywatch::Exporter|  |
+   +--+Paywatch::Watcher+---start--+    | Paywatch::Exporter|  |
    |  +-----------------+               +-+---+----------+--+  |
    |                                      |   |          |     |
-logging                                   |   |     calculate  |
+logging          global idle timer        |   |     calculate  |
    |                                      |   |      overtime  |
    |                                      |   |                |
   ++----------------+                     |   |                |
