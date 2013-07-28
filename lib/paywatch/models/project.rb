@@ -1,5 +1,10 @@
-require 'paywatch/model'
-
-class Project < Paywatch::Model
-  use_data_file 'projects'
+class Project
+  class << self
+    def all
+      []
+    end
+    def create params
+      {}
+    end
+  end
 end

@@ -1,5 +1,4 @@
 require "paywatch/version"
-require "paywatch/api"
 require 'etc'
 
 module Paywatch
@@ -13,3 +12,4 @@ module Paywatch
 end
 
 require 'paywatch/models/project'
+require "paywatch/api"

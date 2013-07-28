@@ -31,7 +31,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'haml'
   spec.add_runtime_dependency 'thin'
   spec.add_runtime_dependency "sinatra"
-  spec.add_runtime_dependency 'static_model'
+  spec.add_runtime_dependency "json"
+  spec.add_runtime_dependency 'moneta'
   spec.add_runtime_dependency "overtimer"
   spec.add_runtime_dependency "prawn"
 end
