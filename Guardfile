@@ -3,6 +3,6 @@ guard :rspec do
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
 
-  watch(%r{^lib/.+haml$}) { |m| "spec/lib/paywatch/gui_spec.rb" }
+  watch(%r{^lib/.+haml$}) { |m| "spec/lib/paywatch/api_spec.rb" }
 end
 

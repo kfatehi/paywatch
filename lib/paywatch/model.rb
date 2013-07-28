@@ -1,5 +1,4 @@
 require 'static_model'
-require 'etc'
 require 'fileutils'
 
 module Paywatch

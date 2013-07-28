@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Paywatch::GUI do
-  let(:app) { Paywatch::GUI }
+describe Paywatch::Api do
+  let(:app) { Paywatch::Api }
   subject { last_response }
 
   shared_examples_for "a page" do
@@ -24,7 +24,7 @@ describe Paywatch::GUI do
 
     describe "create project" do
       before do
-        post '/configure/projects'
+        post '/configure/projects', {name: "Paywatch, Inc."}
       end
       it "creates a project" do
         Project.all.should have(1).item

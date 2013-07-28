@@ -5,7 +5,7 @@ watch activity to determine hours worked per project
 ## Architecture
 ```
                                  +-----------+
-       +-----configure-----------+Sinatra GUI+-----------------+
+       +-----configure-----------+Sinatra/Api+-----------------+
        |                         +-+------+--+                 |
        |                           |      |                    |
     +--+----------------+          |      |                    |

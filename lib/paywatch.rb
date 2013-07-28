@@ -1,5 +1,6 @@
 require "paywatch/version"
-require "paywatch/gui"
+require "paywatch/api"
+require 'etc'
 
 module Paywatch
   def self.env
@@ -10,3 +11,5 @@ module Paywatch
     File.join Etc.getpwuid.dir, '.paywatch'
   end
 end
+
+require 'paywatch/models/project'
