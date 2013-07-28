@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'haml'
 
 module Paywatch
   class GUI < Sinatra::Base
@@ -6,7 +7,7 @@ module Paywatch
     set :foo, 'bar'
 
     get '/' do
-      'Hello world!'
+      haml :index
     end
   end
 end
