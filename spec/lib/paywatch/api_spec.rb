@@ -25,7 +25,7 @@ describe Paywatch::Api do
 
   describe "project API" do
     before do
-      post '/projects', {name: "Paywatch, Inc."}
+      post '/projects', project:{name: "Paywatch, Inc."}
     end
     it "creates a project" do
       Project.all.should have(1).item
