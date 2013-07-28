@@ -12,6 +12,7 @@ module Paywatch
     end
 
     post '/projects' do
+      require 'pry'; binding.pry
       
     end
   end
