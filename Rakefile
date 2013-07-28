@@ -1,6 +1,13 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
+desc "Check Coverage"
+task :cov do
+  Rake::Task[:spec].invoke
+  require 'launchy'
+  Launchy.open('coverage/index.html')
+end
+
 desc "Run specs"
 task :spec do
   RSpec::Core::RakeTask.new(:spec) do |t|
@@ -21,4 +28,4 @@ task :help do
   puts "rake spec - Run specs and calculate coverage"
 end
 
-task :default => :spec
+task :default => :cov

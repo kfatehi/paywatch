@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
   spec.add_development_dependency 'rack-test'
   spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'launchy'
 
   spec.add_runtime_dependency 'haml'
   spec.add_runtime_dependency 'thin'
